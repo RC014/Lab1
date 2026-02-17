@@ -10,8 +10,8 @@ char keys[ROWS][COLS] = { // matricea de caractere asociata butoanelor
 {'7','8','9','C'},
 {'*','0','#','D'}
 };
-byte rowPins[ROWS] = {12, 11, 10, 9}; // numerele 12, 11, 10, 9 sunt pinii digitali de pe placa arduino conectati la randurile tastaturii
-byte colPins[COLS] = {8, 7, 6, 5}; // numerele 8, 7, 6, 5 sunt pinii digitali de pe placa arduino conectati la coloanele tastaturii
+byte rowPins[ROWS] = {0, 1, 2, 3}; // numerele 12, 11, 10, 9 sunt pinii digitali de pe placa arduino conectati la randurile tastaturii
+byte colPins[COLS] = {4, 5, 6, 7}; // numerele 8, 7, 6, 5 sunt pinii digitali de pe placa arduino conectati la coloanele tastaturii
 Keypad customKeypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS,
 COLS); // initializam obiectul tastaturii cu configuratia definita mai sus
 int srv_stdio_keypad_get_key(FILE *stream) // functia care preia caracterele, compatibila cu standardul c

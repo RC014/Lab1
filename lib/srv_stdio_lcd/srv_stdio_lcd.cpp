@@ -12,6 +12,9 @@ if(c==CLEAR_KEY) // verificam daca caracterul primit este comanda de stergere
 {
 lcd.clear(); // stergem tot textul de pe ecran
 lcd.setCursor(0, 0); // numerele 0 si 0 pozitioneaza cursorul la inceput (coloana 0, randul 0)
+}else if(c == '\n') // verificam daca caracterul este linie noua
+{
+lcd.setCursor(0, 1); // mutam cursorul pe randul 2 (indexul 1)
 }else{
 lcd.print(c); // afisam caracterul propriu-zis pe ecran
 }
