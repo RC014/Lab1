@@ -26,7 +26,6 @@ lcd.init(); // initializam comunicatia cu ecranul
 lcd.backlight(); // aprindem lumina de fundal a ecranului
 lcd.clear(); // curatam ecranul de orice text anterior
 lcd.setCursor(0, 0); // resetam cursorul la pozitia de start 0,0
-FILE *srv_stdio_lcd_stream = fdevopen(srvStdioLcdPutc,
-NULL); // deschidem un flux de fisier virtual legat de functia noastra de afisare
+FILE *srv_stdio_lcd_stream = fdevopen(srvStdioLcdPutc,NULL); // deschidem un flux de fisier virtual legat de functia noastra de afisare
 stdout = srv_stdio_lcd_stream; // inlocuim iesirea standard (consola) cu ecranul lcd
 }
