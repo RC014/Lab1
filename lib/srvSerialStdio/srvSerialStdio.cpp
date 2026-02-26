@@ -14,7 +14,7 @@ return Serial.write(ch); // scriem caracterul pe seriala
 }
 void srvSerialStdioSetup()
 {
-Serial.begin(9600); // setam viteza de comunicatie
+Serial.begin(9600); // setam viteza de comunicatie (9600 simboluri pe secunda)
 FILE *srv_serial_stream = fdevopen(srvSerialPutChar,
 srvSerialGetChar); // asociem functiile de citire/scriere cu un flux
 stdin = srv_serial_stream ; // redirectionam intrarea standard
