@@ -1,5 +1,5 @@
 #include "srvStdioLcd.h"
-#include <LiquidCrystal_I2C.h>
+
 #define I2C_ADDR 0x27 // adresa 0x27 este adresa i2c standard pentru acest tip de ecran lcd
 
 #define LCD_COLUMNS 16 // numarul 16 defineste cate caractere incap pe un rand

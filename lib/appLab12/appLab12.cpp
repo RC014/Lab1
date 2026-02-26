@@ -1,8 +1,5 @@
 #include "appLab12.h"
-#include <Arduino.h>
-#include "../srvStdioKeypad/srvStdioKeypad.h"
-#include "../srvStdioLcd/srvStdioLcd.h"
-#include "../led/led.h"
+
 // definim pinii pentru leduri
 
 #define RED_LED 12 // numarul 12 este pinul fizic de pe placa arduino pentru ledul rosu

@@ -1,9 +1,5 @@
 #include "appLab11.h"
-#include <Arduino.h>
-#include <string.h>
-#include "stdio.h"
-#include "../led/led.h"
-#include "../srvSerialStdio/srvSerialStdio.h"
+
 void appLab11Setup()
 {
 srvSerialStdioSetup();

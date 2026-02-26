@@ -1,5 +1,4 @@
 #include "srvStdioKeypad.h"
-#include <Keypad.h>
 #define SRV_KEYPAD_REPEAT_DELAY 100 // numarul 100 reprezinta milisecundele de pauza intre citiri pentru a evita citirile multiple accidentale
 const byte ROWS = 4; // numarul 4 defineste cate randuri fizice are tastatura
 const byte COLS = 4; // numarul 4 defineste cate coloane fizice are tastatura
