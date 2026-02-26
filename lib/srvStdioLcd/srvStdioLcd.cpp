@@ -1,9 +1,6 @@
 #include "srvStdioLcd.h"
+#include "../../include/config.h"
 
-#define I2C_ADDR 0x27 // adresa 0x27 este adresa i2c standard pentru acest tip de ecran lcd
-
-#define LCD_COLUMNS 16 // numarul 16 defineste cate caractere incap pe un rand
-#define LCD_ROWS 2 // numarul 2 defineste cate randuri are ecranul
 #define CLEAR_KEY '\f' // caracterul # este folosit pentru a sterge continutul ecranului
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_ROWS); // initializam obiectul lcd cu parametrii definiti mai sus
 int srvStdioLcdPutc( char c, FILE *stream) // functie care trimite un caracter catre ecran, compatibila cu fluxurile standard

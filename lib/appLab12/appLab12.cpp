@@ -1,16 +1,16 @@
 #include "appLab12.h"
+#include "../../include/config.h"
 
-// definim pinii pentru leduri
+led_t hRedLed;
+led_t hGreenLed;
 
-#define RED_LED 12 // numarul 12 este pinul fizic de pe placa arduino pentru ledul rosu
-#define GREEN_LED 11 // numarul 11 este pinul fizic de pe placa arduino pentru ledul verde
 // configuram ledurile si sistemul de intrare/iesire
 void appLab12Setup()
 {
-srvStdioKeypadSetup();
-srvStdioLcdSetup();
-myLedSetup(RED_LED);
-myLedSetup(GREEN_LED);
+    srvStdioKeypadSetup();
+    srvStdioLcdSetup();
+    myLedArduinoSetup(&hRedLed, RED_LED);
+    myLedArduinoSetup(&hGreenLed, GREEN_LED);
 }
 // definirea parolei corecte
 char code[4] = {'1','2','3','4'}; // numarul 4 defineste lungimea fixa a parolei, cifrele din acolade reprezinta pin-ul corect
@@ -29,15 +29,18 @@ printf("\f");
 if(input[0] == code[0] && input[1] == code[1] && input[2] == code[2] &&
 input[3] == code[3]) // verificam indexii 0, 1, 2, 3 pentru a valida toata secventa
 {
-printf("Corect!"); // mesaj afisat daca parola este corecta
-ledOff(RED_LED);
-ledOn(GREEN_LED); // aprindem ledul verde
+    printf("Corect!"); // mesaj afisat daca parola este corecta
+    ledOff(&hRedLed);
+    ledOn(&hGreenLed); // aprindem ledul verde
 }
 else
 {
-printf("Incorect!"); // mesaj afisat daca parola este gresita
-ledOff(GREEN_LED);
-ledOn(RED_LED); // aprindem ledul rosu
+    printf("Incorect!"); // mesaj afisat daca parola este gresita
+    ledOff(&hGreenLed);
+    ledOn(&hRedLed); // aprindem ledul rosu
 }
 delay(2000); // asteptam 2 secunde pentru ca utilizatorul sa poata citi rezultatul
+ledOff(&hGreenLed);
+ledOff(&hRedLed); // stingem ledurile inainte de a relua ciclul
+
 }
