@@ -16,7 +16,7 @@ myLedSetup(RED_LED);
 myLedSetup(GREEN_LED);
 }
 // definirea parolei corecte
-char code[4] = {'1','2','3','4'}; // numarul 4 defineste lungimea fixa a parolei
+char code[4] = {'1','2','3','4'}; // numarul 4 defineste lungimea fixa a parolei, cifrele din acolade reprezinta pin-ul corect
 char input[4]; // numarul 4 rezerva memorie pentru cele 4 taste apasate de utilizator
 void appLab12Loop()
 {
