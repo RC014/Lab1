@@ -5,7 +5,7 @@
 #define USE_APP_LAB_1_1 11
 #define USE_APP_LAB_1_2 12
 
-#define APP_USED USE_APP_LAB_1_2
+#define APP_USED USE_APP_LAB_1_1
 void setup() {
 #if APP_USED == USE_APP_LAB_1_1
 app_lab_1_1_setup();
