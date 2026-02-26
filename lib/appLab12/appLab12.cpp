@@ -17,7 +17,7 @@ char code[4] = {'1','2','3','4'}; // numarul 4 defineste lungimea fixa a parolei
 char input[4]; // numarul 4 rezerva memorie pentru cele 4 taste apasate de utilizator
 void appLab12Loop()
 {
-printf("#"); // curatam ecranul inainte de a afisa promptul de introducere
+printf("\f"); // curatam ecranul inainte de a afisa promptul de introducere
 printf("Scrierti parola:\n"); // cerem utilizatorului sa introduca codul si trecem la randul urmator
 for(int i = 0; i < 4; i++) // bucla pentru a citi si afisa fiecare din cele 4 caractere
 {
@@ -25,7 +25,7 @@ scanf("%c", &input[i]); // asteptam si citim o tasta
 printf("%c", input[i]); // afisam tasta citita pe ecran pentru feedback vizual
 }
 // stergerea ecranului
-printf("#");
+printf("\f");
 if(input[0] == code[0] && input[1] == code[1] && input[2] == code[2] &&
 input[3] == code[3]) // verificam indexii 0, 1, 2, 3 pentru a valida toata secventa
 {
