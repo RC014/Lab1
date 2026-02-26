@@ -1,5 +1,4 @@
 #include "srvSerialStdio.h"
-#include "stdio.h"
 int srvSerialGetChar(FILE *f)
 {
 while (!Serial.available()) // asteptam pana cand sunt date disponibile
