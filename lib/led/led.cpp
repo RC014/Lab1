@@ -1,15 +1,15 @@
 #include "led.h"
 #include <Arduino.h>
-void my_led_setup(int pin){
+void myLedSetup(int pin){
 pinMode(pin, OUTPUT);
 digitalWrite(pin, LOW);
 }
-void led_on(int pin) {
+void ledOn(int pin) {
 digitalWrite(pin, HIGH);
 }
-void led_off(int pin) {
+void ledOff(int pin) {
 digitalWrite(pin, LOW);
 }
-void led_toggle(int pin){
+void ledToggle(int pin){
 digitalWrite(pin, !digitalRead(pin));
 }

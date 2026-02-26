@@ -1,4 +1,4 @@
-#include "srv_stdio_keypad.h"
+#include "srvStdioKeypad.h"
 #include <Keypad.h>
 #define SRV_KEYPAD_REPEAT_DELAY 100 // numarul 100 reprezinta milisecundele de pauza intre citiri pentru a evita citirile multiple accidentale
 const byte ROWS = 4; // numarul 4 defineste cate randuri fizice are tastatura
@@ -14,7 +14,7 @@ byte rowPins[ROWS] = {0, 1, 2, 3}; // numerele 12, 11, 10, 9 sunt pinii digitali
 byte colPins[COLS] = {4, 5, 6, 7}; // numerele 8, 7, 6, 5 sunt pinii digitali de pe placa arduino conectati la coloanele tastaturii
 Keypad customKeypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS,
 COLS); // initializam obiectul tastaturii cu configuratia definita mai sus
-int srv_stdio_keypad_get_key(FILE *stream) // functia care preia caracterele, compatibila cu standardul c
+int srvStdioKeypadGetKey(FILE *stream) // functia care preia caracterele, compatibila cu standardul c
 {
 int customKey; // variabila temporara pentru tasta citita
 do { // bucla care asteapta pana cand utilizatorul apasa o tasta
@@ -23,8 +23,8 @@ customKey = customKeypad.getKey(); // interogam hardware-ul
 delay(SRV_KEYPAD_REPEAT_DELAY); // asteptam 100ms definit mai sus pentru a preveni inregistrarea dubla a unei apasari
 return customKey; // returnam caracterul gasit catre sistem
 }
-void srv_stdio_keypad_setup()
+void srvStdioKeypadSetup()
 {
-FILE *my_stream = fdevopen(NULL, srv_stdio_keypad_get_key); // deschidem un flux de date standard conectat la functia noastra de citire
-stdin = my_stream; // inlocuim intrarea standard (tastatura pc-ului) cu tastatura noastra matriciala
+FILE *myStream = fdevopen(NULL, srvStdioKeypadGetKey); // deschidem un flux de date standard conectat la functia noastra de citire
+stdin = myStream; // inlocuim intrarea standard (tastatura pc-ului) cu tastatura noastra matriciala
 }
