@@ -1,15 +1,15 @@
 #include "led.h"
 #include <Arduino.h>
 void myLedSetup(int pin){
-pinMode(pin, OUTPUT);
-digitalWrite(pin, LOW);
+pinMode(pin, OUTPUT); // setam pinul ca iesire
+digitalWrite(pin, LOW); // stingem ledul initial
 }
 void ledOn(int pin) {
-digitalWrite(pin, HIGH);
+digitalWrite(pin, HIGH); // aprindem ledul
 }
 void ledOff(int pin) {
-digitalWrite(pin, LOW);
+digitalWrite(pin, LOW); // stingem ledul
 }
 void ledToggle(int pin){
-digitalWrite(pin, !digitalRead(pin));
+digitalWrite(pin, !digitalRead(pin)); // inversam starea ledului
 }
