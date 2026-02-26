@@ -1,5 +1,4 @@
 #include "srvSerialStdio.h"
-#include "Arduino.h"
 #include "stdio.h"
 int srvSerialGetChar(FILE *f)
 {
