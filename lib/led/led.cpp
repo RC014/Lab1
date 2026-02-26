@@ -1,5 +1,5 @@
 #include "led.h"
-#include <Arduino.h>
+
 void myLedSetup(int pin){
 pinMode(pin, OUTPUT); // setam pinul ca iesire
 digitalWrite(pin, LOW); // stingem ledul initial
