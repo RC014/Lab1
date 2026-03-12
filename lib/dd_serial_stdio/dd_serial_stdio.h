@@ -1,5 +1,5 @@
-#ifndef SRV_SERIAL_STDIO_H_
-#define SRV_SERIAL_STDIO_H_
+#ifndef DD_SERIAL_STDIO_H_
+#define DD_SERIAL_STDIO_H_
 #include <stdio.h>
 #include <Arduino.h>
 int srvSerialPutChar(char ch, FILE *f);

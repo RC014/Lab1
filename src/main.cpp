@@ -1,23 +1,15 @@
 #include <Arduino.h>
-#include "../lib/appLab11/appLab11.h"
-#include "../lib/appLab12/appLab12.h"
+#include "../app_lab_2_1/app_lab_2_1.h"
 
-#define USE_APP_LAB_1_1 11
-#define USE_APP_LAB_1_2 12
-
-#define APP_USED USE_APP_LAB_1_2
+#define USE_APP_LAB_2_1 21
+#define APP_USED USE_APP_LAB_2_1
 void setup() {
-#if APP_USED == USE_APP_LAB_1_1
-appLab11Setup();
-#elif APP_USED == USE_APP_LAB_1_2
-appLab12Setup();
+#if APP_USED == USE_APP_LAB_2_1
+app_lab_2_1_setup();
 #endif
 }
-
 void loop() {
-#if APP_USED == USE_APP_LAB_1_1
-appLab11Loop();
-#elif APP_USED == USE_APP_LAB_1_2
-appLab12Loop();
+#if APP_USED == USE_APP_LAB_2_1
+app_lab_2_1_loop();
 #endif
 }
